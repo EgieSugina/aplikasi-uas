@@ -17,6 +17,7 @@ require_once("../koneksi.php"); ?>
 
     <link rel="stylesheet" href="../styles/style.css">
 </head>
+
 <body class="">
     <div class="login-page bg-light  bg-img-login">
         <div class="bg-backdrop container-fluid h-100 login-page">
@@ -38,7 +39,6 @@ require_once("../koneksi.php"); ?>
                                                         required="required" placeholder="Enter Username">
                                                 </div>
                                             </div>
-
                                             <div class="col-12">
                                                 <label>Password<span class="text-danger">*</span></label>
                                                 <div class="input-group">
@@ -47,7 +47,6 @@ require_once("../koneksi.php"); ?>
                                                         required="required" placeholder="Enter Password">
                                                 </div>
                                             </div>
-
                                             <div class="col-12">
                                                 <button type="submit"
                                                     class="btn btn-primary px-4 float-end mt-4">login</button>
@@ -62,7 +61,6 @@ require_once("../koneksi.php"); ?>
                                             <img src="../images/logo_login.svg" alt="Logo Depan" class="shadow rounded">
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
