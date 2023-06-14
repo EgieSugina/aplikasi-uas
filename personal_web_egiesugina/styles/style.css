@@ -1,0 +1,71 @@
+a {
+    text-decoration: none;
+}
+.login-page {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+.form-right i {
+    font-size: 100px;
+}
+.bg-img-login {
+    background-image: url("../images/bg-login.jpg");
+    background-size: cover;
+}
+.bg-subs-img-login {
+    background-image: url("../images/bg-subs-login.jpg");
+    background-size: cover;
+}
+.bg-img-tamu {
+    background-image: url("../images/bg-tamu.jpg");
+    background-size: cover;
+}
+.bg-img-admin {
+    background-image: url("../images/bg-admin.png");
+    background-size: cover;
+}
+.bg-backdrop {
+    backdrop-filter: blur(3px);
+}
+.bg-backdrop-admin {
+    background: rgba(255, 255, 255, 0.53);
+    height: 100vh;
+    margin-top: 0px;
+    backdrop-filter: blur(3px);
+    background-size: cover;
+}
+.btn-group-xs > .btn,
+.btn-xs {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.875rem;
+    line-height: 0.5;
+    border-radius: 0.2rem;
+}
+
+.image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    background-image: url("./../styles/icons/logo-panjang.svg");
+    background-size: 310px;
+    background-position: center;
+    width: 200px;
+    height: 40px;
+    margin-right: 10px;
+}
