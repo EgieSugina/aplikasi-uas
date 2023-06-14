@@ -1,0 +1,181 @@
+ 
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section {
+    display: block;  
+}
+html,
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+a,
+p,
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section {
+    padding: 0;  dan border */
+    margin: 0;  
+}  
+.banner {
+    background-color: #11233b;
+    color: white;
+    padding: 10px 20px;
+}
+b {
+    text-align: right;
+}  
+body {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f0f0f0;
+    font-family: Helvetica;
+    font-size: 15px;
+}  
+nav {
+    background-color: #20416c;
+    padding: 5px;
+    margin-top: 1px;
+}  
+li a {
+    color: white;
+}  
+li {
+    display: inline;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bold;
+}  
+section {
+    background-color: #bbbbbb;
+    margin-top: 10px;
+    padding: 5px;
+}  
+article {
+    margin-top: 5px;
+    padding: 10px 15px;
+}  
+main {
+    width: 640px;
+    float: left;
+    margin-bottom: 10px;
+}  
+aside {
+    background-color: #bbbbbb;
+    width: 270px;
+    float: right;
+    padding: 20px;
+    margin-top: 10px;
+}  
+footer {
+    clear: both;
+    background-color: #20416c;
+    color: white;
+    padding: 5px 20px;
+}  
+form {
+    width: 500px;
+} 
+.search {
+    padding: 8px 15px;
+    background: rgba(50, 50, 50, 0.2);
+    border: 0px solid #20416c;
+}
+ 
+.button {
+    position: relative;
+    padding: 6px 15px;
+    left: -8px;
+    border: 2px solid #20416c;
+    background-color: #20416c;
+    color: #fafafa;
+}  
+.button:hover {
+    background-color: #fafafa;
+    color: #20416c;
+} 
+.table {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444;
+    border-collapse: collapse;
+    width: 40%;
+    border: 1px solid #f2f5f7;
+}
+.table tr th {
+    background: #35a9db;
+    color: #fff;
+    font-weight: small;
+}
+.table th,
+td {
+    padding: 4px 17px;
+}
+.table tr:hover {
+    background-color: #f5f5f5;
+}
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+div.form1 {
+    padding: 10px 22px 0;
+    color: #808080;
+}
+div.form1 div.grup {
+    margin: 16px 0;
+}
+div.form1 div.grup label {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+div.form1 div.grup textarea {
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    background: #eeeeee;
+    border: none;
+    color: #808080;
+}
+div.form1 div.grup select {
+    width: 20%;
+    height: 30px;
+    padding: 0 10px;
+    background: #eeeeee;
+    border: none;
+    color: #808080;
+}
+div.form1 div.grup input[type="text"],
+div.form1 div.grup input[type="password"] {
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    background: #eeeeee;
+    border: none;
+    color: #808080;
+}
+div.form1 div.grup input[type="submit"] {
+    background: #20416c;
+    padding: 4px 16px;
+    margin: 0 auto;
+    border: 1px solid #20416c;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+div.form1 div.grup input[type="submit"]:hover {
+    background-color: #fafafa;
+    color: #20416c;
+}

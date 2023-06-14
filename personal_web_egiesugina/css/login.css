@@ -1,0 +1,44 @@
+/* CSS Document */
+.input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #333;
+}
+.input:hover {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #333;
+    background: #ffff99;
+}
+.input:focus {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #333;
+    background: #ffff99;
+}
+.button {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: blue;
+    box-shadow: 1px 1px 2px #333;
+    margin-bottom: 5px;
+}
+.button:hover {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #333;
+    background: white;
+}
+.loginstyle {
+    border: 2px solid #ccc;
+    border-radius: 7px;
+    background: #0099ff;
+    background: -moz-lineargradient(top, #0099ff, transparent, #0099ff);
+    box-shadow: 3px 3px 6px #666;
+    margin-top: 150px;
+}
+.divstyle {
+    margin-top: 10px;
+    margin-left: 1px;
+    text-align: center;
+}
