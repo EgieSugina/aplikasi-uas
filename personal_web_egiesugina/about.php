@@ -29,9 +29,11 @@
                         $sql = "select * from tbl_about";
                         $query = mysqli_query($db, $sql);
                         $data = mysqli_fetch_array($query);
+
                         if (isset($data)) {
-                            # code...
-                            echo $data["about"];
+                            $replacement = '/admin';
+                            $result = str_replace('/images/upload/', $replacement . '/images/upload/', $data['about']);
+                            echo $result;
                         }
                         ?>
                     </h3>

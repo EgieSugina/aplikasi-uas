@@ -5,7 +5,7 @@ if (isset($_POST['simpan'])) {
     $deskripsi = $_POST['deskripsi'];
     $name = $_FILES['gambar']['name'];
     $file = $_FILES['gambar']['tmp_name'];
-    move_uploaded_file($file, "../images/$name");
+    move_uploaded_file($file, "../admin/images/upload/$name");
     $sql = "INSERT INTO tbl_gallery (deskripsi, gambar) VALUE ('$deskripsi','$name')";
     $query = mysqli_query($db, $sql);
     // apakah query simpan berhasil? 

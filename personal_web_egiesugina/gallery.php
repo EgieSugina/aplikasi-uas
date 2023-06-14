@@ -33,15 +33,15 @@
                     if ($query->num_rows > 0) {
                         while ($row = $query->fetch_assoc()) {
 
-                            $imageThumbURL = './images/' . $row["gambar"];
-                            $imageURL = './images/' . $row["gambar"]; ?>
+                            $imageThumbURL = './admin/images/upload/' . $row["gambar"];
+                            $imageURL = './admin/images/upload/' . $row["gambar"]; ?>
                             <div class="  card shadow rounded  ">
 
                                 <a class="lightbox" href="<?php echo $imageURL; ?>"> <img src="<?php echo $imageThumbURL; ?>"
                                         class="rounded" alt="<?php $row["deskripsi"]; ?>" width="200px" height="200px" /> </a>
 
 
-                                <span class="position-absolute fw-bolder text-truncate shadow start-0 bottom-0 bg-backdrop">
+                                <span style="max-width: 200px;" class="position-absolute fw-bolder text-truncate shadow start-0 bottom-0 bg-backdrop">
                                     <?php echo $row["deskripsi"]; ?>
                                 </span>
                             </div>

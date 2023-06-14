@@ -1,7 +1,7 @@
 ﻿if (CKEDITOR.env.ie && CKEDITOR.env.version < 9)
   CKEDITOR.tools.enableHtml5Elements(document);
 
-CKEDITOR.config.height = "68%";
+CKEDITOR.config.height = "50%";
 CKEDITOR.config.width = "auto";
 
 var initSample = (function () {

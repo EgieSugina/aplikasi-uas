@@ -1,6 +1,6 @@
 <?php require_once('../koneksi.php');
 // cek apakah tombol simpan sudah diklik atau blum? 
-if (isset($_POST['simpan'])) {
+if (isset($_POST['id_artikel'])) {
     // ambil data dari formulir 
     $id_artikel = $_POST['id_artikel'];
     $nama_artikel = $_POST['nama_artikel'];

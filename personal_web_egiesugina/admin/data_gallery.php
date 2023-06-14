@@ -46,7 +46,7 @@
                                             <?php echo $index + 1; ?>
                                         </td>
                                         <td>
-                                            <?php echo " <img src='../images/" . $item['gambar'] . "' width='100px' height='100px'> "; ?>
+                                            <?php echo " <img src='../admin/images/upload/" . $item['gambar'] . "' width='100px' height='100px'> "; ?>
                                         </td>
                                         <td>
                                             <?php echo $item['deskripsi']; ?>

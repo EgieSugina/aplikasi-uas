@@ -24,44 +24,49 @@
             <section class="bg-white container-fluid p-4 min-vh-80-custom">
                 <div class="row ">
                     <article class="col-9   p-2  ">
-                        <div style='text-align: justify;' class="text-truncate">
+                        <div style='text-align: justify;' class=" text-break">
                             <?php require_once "koneksi.php";
 
                             $cari_artikel = (isset($_GET['search'])) ? "WHERE nama_artikel LIKE '%{$_GET['search']}%' OR isi_artikel LIKE '%{$_GET['search']}%'" : '';
                             $sql = "SELECT * FROM tbl_artikel {$cari_artikel} ORDER BY id_artikel desc";
                             $query = mysqli_query($db, $sql);
-                            while ($data = mysqli_fetch_array($query)) { ?>
-                                <strong>
+                            while ($data = mysqli_fetch_array($query)) {
+
+                                $replacement = '/admin';
+                                $result = str_replace('/images/upload/', $replacement . '/images/upload/', $data['isi_artikel']);
+
+                                ?>
+                                <!-- <strong>
                                     <font size="4">
                                         <?php echo $data['nama_artikel']; ?>
                                     </font>
-                                </strong><br>
-                                <?php echo $data['isi_artikel']; ?>
+                                </strong><br> -->
+                                <?php echo $result; ?>
                                 <hr color="blue" />
                             <?php } ?>
                         </div>
                     </article>
-                    <aside class="col-3   p-2 align-items-center shadow rounded">
+                    <aside class="col-3   p-2 align-items-center shadow rounded min-vh-80-custom">
                         <h5>Top Artikel </h5>
                         <?php $sql = "select * from tbl_artikel order by id_artikel desc limit 5";
                         $query = mysqli_query($db, $sql);
-                        while ($data = mysqli_fetch_array($query)) { ?>
+                        ?>
 
-                            <div class="toast show mt-3">
-                                <div class="toast-header">
-                                    <!-- <img src="..." class="rounded me-2" alt="..."> -->
-                                    <strong class="me-auto">
-                                        <?php echo $data['nama_artikel']; ?>
-                                    </strong>
-                                    <!-- <small>11 mins ago</small> -->
-                                </div>
-                                <div class="toast-body text-truncate">
-                                    <?php echo $data['isi_artikel']; ?>
-                                </div>
-                            </div>
+                        <ul class="list-group">
+
+                            <?php
+                            while ($data = mysqli_fetch_array($query)) { ?>
 
 
-                        <?php } ?>
+                                <li class="list-group-item text-break">
+                                    <?php echo $data['nama_artikel']; ?>
+                                </li>
+
+
+
+
+                            <?php } ?>
+                        </ul>
                     </aside>
                 </div>
 

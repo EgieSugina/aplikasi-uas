@@ -46,10 +46,10 @@
                                             <?php echo $index + 1; ?>
                                         </td>
 
-                                        <td class=" text-truncate">
+                                        <td class="text-break">
                                             <?php echo $item['nama_artikel']; ?>
                                         </td>
-                                        <td class=" text-truncate" style=" max-width: 40vw">
+                                        <td class="text-break" style=" max-width: 40vw">
                                             <?php echo $item['isi_artikel']; ?>
                                         </td>
 
