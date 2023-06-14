@@ -9,14 +9,14 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <li><a class="nav-link" href="index.php">Beranda</a></li>
+                    <a class="nav-link" href="index.php">Beranda</a>
                 </li>
 
                 <li class="nav-item">
-                <li><a class="nav-link" href="input_data.php">Input Data</a></li>
+                    <a class="nav-link" href="input_data.php">Input Data</a>
                 </li>
                 <li class="nav-item">
-                <li><a class="nav-link" href="tentang.php">Tentang Aplikasi</a></li>
+                    <a class="nav-link" href="tentang.php">Tentang Aplikasi</a>
                 </li>
             </ul>
 

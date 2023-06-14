@@ -68,10 +68,6 @@
                                     <a href="#" class="btn btn-sm btn-danger disabled">Booked</a>
 
                                 <?php } ?>
-
-
-
-
                             </div>
                         </div>
                     <?php } ?>
