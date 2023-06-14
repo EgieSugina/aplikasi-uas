@@ -50,7 +50,7 @@
                     } ?>
                 </div>
             </section>
-            <?php include './components/footer.php' ?>
+            <?php require_once './components/footer.php' ?>
         </main>
     </div>
 </body>

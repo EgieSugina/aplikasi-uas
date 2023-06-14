@@ -1,4 +1,4 @@
-<?php include('../koneksi.php');
+<?php require_once('../koneksi.php');
 // cek apakah tombol simpan sudah diklik atau blum? 
 if (isset($_POST['simpan'])) {
     // ambil data dari formulir 

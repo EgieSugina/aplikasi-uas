@@ -1,4 +1,4 @@
-<?php include('../koneksi.php');
+<?php require_once('../koneksi.php');
 // kalau tidak ada id_gallery di query string 
 if (!isset($_GET['id_gallery'])) {
     //header('Location: index.php'); 

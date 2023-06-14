@@ -1,4 +1,4 @@
-<?php include('../koneksi.php');
+<?php require_once('../koneksi.php');
 if (isset($_GET['id_gallery'])) {
     // ambil id_gallery dari query string 
     $id_gallery = $_GET['id_gallery'];

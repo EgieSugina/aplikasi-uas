@@ -1,85 +1,78 @@
-<?php include('../koneksi.php'); ?>
+<?php require_once('../koneksi.php'); ?>
 <html>
 
 <head>
     <link rel="shortcut icon" href="../images/p.jpg" />
-    <link rel="stylesheet" href="../css/style2.css" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>Halaman Administrator</title>
 </head>
 
-<body>
-    <table width="1047" border="0" align="center" class="table">
-        <tr>
-            <td height="100" colspan="2" align="center" valign="middle">
-                <table width="100%" height="100" border="0" cellpadding="7">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <font color="white" size="7px"> // HALAMAN ADMIN // </font>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td width="21%" valign="top">
-                <table width="100%" border="0" cellpadding="5">
-                    <tr>
-                        <td align="center" bgcolor="blue"><strong>
-                                <font color="#FFFFFF">MENU</font>
-                            </strong></td>
-                    </tr>
-                    <tr>
-                        <td align="left"> <a href="beranda_admin.php">Beranda</a> <br> <a href="data_artikel.php">Kelola
-                                Artikel</a><br> <a href="data_gallery.php">Kelola Gallery</a><br> <a
-                                href="about.php">About</a><br> <a href="logout.php"
-                                onclick="return confirm('Apakah anda yakin ingin keluar?');">Logout</a><br> </td>
-                    </tr>
-                </table>
-            </td>
-            <td width="79%" valign="top">
-                <table width="100%" border="0" cellpadding="5">
-                    <tr>
-                        <td>
-                            <div style="margin-bottom: 5px; margin-left: 3px;"> [+] <a
-                                    href="add_about.php"><strong>Tambah</strong></a> </div>
-                            <table width="100%" align="center" cellpadding="3" bgcolor="white">
-                                <tr bgcolor="blue" align="center" style="font-weight: bold;">
-                                    <td>About</td>
-                                    <td>Aksi</td>
+<body class="bg-img-admin  ">
+    <div class="bg-backdrop-admin container-fluid h-screen p-3">
+        <?php
+
+        include './menu.php';
+        ?>
+        <main class="mt-3 container shadow rounded bg-danger px-0 pt-2 ">
+            <section class="bg-white container-fluid p-4 min-vh-80-custom">
+                <div class="mt-3">
+                    <div class="col-3">
+                        <a href="add_about.php"><button class="btn btn-info btn-sm"><i class="bi bi-journal-plus"></i>
+                                Tambah</button></a>
+                    </div>
+
+                    <table class="table mt-3">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">About</th>
+                                <th scope="col">Aksi</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php require_once '../koneksi.php';
+                            $sql = "select * from tbl_about";
+                            $query = mysqli_query($db, $sql);
+                            foreach ($query as $index => $item): ?>
+                                <tr>
+                                    <td>
+                                        <?php echo $index + 1; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $item['about']; ?>
+                                    </td>
+
+                                    <td class="text-end">
+                                        <a href='edit_about.php?id="<?php echo $item['id']; ?>"'>
+                                            <button class="btn btn-success btn-xs"><i class="bi bi-pencil"></i>
+                                                Edit</button></a>
+                                        <a onclick='return confirm("Apakah data ini ingin dihapus ?");'
+                                            href='delete_about.php?id=<?php echo $item['id']; ?>'>
+                                            <button class="btn btn-danger btn-xs"><i class="bi bi-trash"></i>
+                                                Delete</button></a>
+                                    </td>
                                 </tr>
-                                <?php include '../koneksi.php';
-                                $sql = "select * from tbl_about";
-                                $query = mysqli_query($db, $sql);
-                                while ($data = mysqli_fetch_array($query)) {
-                                    echo "<tr>";
-                                    echo "<td>" . $data['about'] . "</td>";
-                                    echo "<td><center>";
-                                    echo "<a href='edit_about.php?id=" . $data['id'] . "'>Edit</a>";
-                                    echo "</center></td>";
-                                    echo "</tr>";
-                                } ?>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <hr>
-                <table width="100%" border="0" cellpadding="7">
-                    <tr>
-                        <td align="center">
-                            <p> &copy;
-                                <?php echo date('Y') ?> | Created by NamaSendiri
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+            <?php require_once './footer.php' ?>
+
+        </main>
+
+    </div>
 </body>
+
+
+
+
 
 </html>
 <script> function hapus() {var conf = confirm("Apakah data ini ingin dihapus ?"); if (conf == true) {return true;} else {return false;} } </script>

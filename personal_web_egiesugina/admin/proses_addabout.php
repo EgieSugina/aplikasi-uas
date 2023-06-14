@@ -1,6 +1,6 @@
-<?php include('../koneksi.php');
+<?php require_once('../koneksi.php');
 // cek apakah tombol daftar sudah diklik atau blum? 
-if (isset($_POST['simpan'])) {
+if (isset($_POST['about'])) {
     // ambil data dari formulir 
     $about = $_POST['about'];
     // buat query 

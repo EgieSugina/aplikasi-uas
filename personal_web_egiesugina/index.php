@@ -25,7 +25,7 @@
                 <div class="row ">
                     <article class="col-9   p-2  ">
                         <div style='text-align: justify;' class="text-truncate">
-                            <?php include "koneksi.php";
+                            <?php require_once "koneksi.php";
 
                             $cari_artikel = (isset($_GET['search'])) ? "WHERE nama_artikel LIKE '%{$_GET['search']}%' OR isi_artikel LIKE '%{$_GET['search']}%'" : '';
                             $sql = "SELECT * FROM tbl_artikel {$cari_artikel} ORDER BY id_artikel desc";
@@ -66,7 +66,7 @@
                 </div>
 
             </section>
-            <?php include './components/footer.php' ?>
+            <?php require_once './components/footer.php' ?>
         </main>
 
     </div>

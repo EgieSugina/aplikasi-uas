@@ -1,11 +1,4 @@
-<!-- <nav>
-    <ul>
-        <li><a href="index.php">Artikel</a></li>
-        <li><a href="gallery.php">Gallery</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="admin/login.php">Login</a></li>
-    </ul>
-</nav> -->
+ 
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary container  shadow rounded">
     <div class="container-fluid">

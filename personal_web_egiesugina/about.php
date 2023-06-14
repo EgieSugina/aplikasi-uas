@@ -25,7 +25,7 @@
             <section class="bg-white container-fluid p-4 min-vh-80-custom">
                 <article>
                     <h3>
-                        <?php include('koneksi.php');
+                        <?php require_once('koneksi.php');
                         $sql = "select * from tbl_about";
                         $query = mysqli_query($db, $sql);
                         $data = mysqli_fetch_array($query);
@@ -38,7 +38,7 @@
 
                 </article>
             </section>
-            <?php include './components/footer.php' ?>
+            <?php require_once './components/footer.php' ?>
         </main>
     </div>
 </body>

@@ -1,4 +1,4 @@
-<?php include('../koneksi.php');
+<?php require_once('../koneksi.php');
 if (isset($_GET['id_artikel'])) {
     // ambil id_artikel dari query string 
     $id_artikel = $_GET['id_artikel'];

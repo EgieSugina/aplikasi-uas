@@ -1,4 +1,4 @@
-<?php include('../koneksi.php');
+<?php require_once('../koneksi.php');
 // kalau tidak ada id di query string 
 if (!isset($_GET['id'])) {
     //header('Location: index.php'); 
