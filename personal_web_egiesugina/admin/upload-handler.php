@@ -19,9 +19,8 @@ if (move_uploaded_file($uploadedFile, $targetFilePath)) {
     echo json_encode(
 
         array(
-            'uploaded' => 1,
-            'fileName' => $uniqueFilename,
-            'url' => $imageUrl
+            'fileName' => '/images/upload/' . $uniqueFilename,
+            'success' => true,
         )
     );
 } else {
