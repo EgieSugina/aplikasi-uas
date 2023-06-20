@@ -11,7 +11,6 @@ if (isset($_SESSION['nik'])) {
         header("Location: home");
         exit();
     }
-
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nik = $_POST["nik"];
@@ -27,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: home");
         exit();
     } else {
-        echo "Invalid nik or password";
+        $error = "Invalid NIK or Password";
     }
 }
 ?>
@@ -81,17 +80,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                     class="btn btn-primary px-4 float-end mt-4">login</button>
                                             </div>
                                         </form>
+                                        <?php if (isset($error)) { ?>
+                                            <div class="text-danger text-center">
+                                                <?php echo $error; ?>
+
+                                            </div>
+                                        <?php } ?>
+                                        <div class="">
+                                            <table>
+                                                <tr>
+                                                    <td>Admin</td>
+                                                    <td>|user/pass</td>
+                                                    <td>:</td>
+                                                    <td>admin / admin</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tamu</td>
+                                                    <td>|user/pass</td>
+                                                    <td>:</td>
+                                                    <td>tamu / tamu</td>
+                                                </tr>
+                                            </table>
+                                        </div>
                                     </div>
+
                                 </div>
                                 <div class="col-md-5  d-none d-md-block">
                                     <div class=" bg-subs-img-login h-100 ">
                                         <div
                                             class="form-right h-100  text-primary bg-backdrop image-container  w-100 text-center pt-5  ">
-                                            <img src="./styles/icons/logo-bulat.svg" alt="Logo Depan" class="shadow">
+                                            <img src="../styles/icons/logo-bulat.svg" alt="Logo Depan" class="shadow">
                                         </div>
                                     </div>
 
                                 </div>
+
                             </div>
                         </div>
                         <div class=" bg-backdrop">

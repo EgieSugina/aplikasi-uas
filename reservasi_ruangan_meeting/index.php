@@ -1,13 +1,14 @@
 <?php
-// include './components/islogin.php' 
+// include './components/isindex.php' 
 $routes = [
-    '' => './views/login.php',
-    'login' => './views/login.php',
-    'logout' => './components/logout.php',
-    'admin/home' => './views/admin/home.php',
-    'admin/ruangan' => './views/admin/ruangan.php',
-    'home' => './views/tamu/home.php',
-    'myreservations' => './views/tamu/myreservations.php',
+    '' => 'REQUEST_URI',
+    'index.php' => 'REQUEST_URI',
+    'index.php/login' => './views/login.php',
+    'index.php/logout' => './components/logout.php',
+    'index.php/admin/home' => './views/admin/home.php',
+    'index.php/admin/ruangan' => './views/admin/ruangan.php',
+    'index.php/home' => './views/tamu/home.php',
+    'index.php/myreservations' => './views/tamu/myreservations.php',
 
 ];
 $url = $_SERVER['REQUEST_URI'];
@@ -17,7 +18,11 @@ $route = parse_url($url, PHP_URL_PATH);
 $route = rtrim(ltrim($route, '/'), '/');
 if (array_key_exists($route, $routes)) {
     $handlerFile = $routes[$route];
-    include $handlerFile;
+    if ($handlerFile == 'REQUEST_URI') {
+        header("location: index.php/login");
+    } else {
+        include $handlerFile;
+    }
 } else {
     echo '404 - Page Not Found';
 }
